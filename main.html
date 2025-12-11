@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intan & Nikko | 1 Year Anniversary</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header class="anniversary-header">
+        <div class="header-content">
+            <h1>💖 Intan & Nikko | 1 Year of Love. 🥂</h1>
+        </div>
+    </header>
+
+    <main class="anniversary-main">
+        <section class="video-section">
+            <h2 class="section-title">✨ Our Favorite Moments (Videos) ✨</h2>
+            <div class="carousel-vid">
+                <div class="carousel-vid-track">
+                    <div class="vid">
+                        <video width="240" height="240" controls autoplay loop>
+                            <source src="src/42832.mp4" autoplay type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+
+                    <div class="vid">
+                        <video width="240" height="360" controls autoplay muted loop>
+                            <source src="src/35709.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+
+                    <div class="vid">
+                        <video width="240" height="360" controls autoplay muted loop>
+                            <source src="src/111111.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                
+                <button class="prev-btn">◀</button>
+                <button class="next-btn">▶</button>
+            </div>
+        </section>
+
+        <section class="gallery-section">
+            <h2 class="section-title">💌 A Glimpse of Our Journey (Photos) 💌</h2>
+             <div class="carousel photo-carousel">
+                <div class="group">
+                    <img src="src/1.png" alt="Image 1" class="card">
+                    <img src="src/2.png" alt="Image 2" class="card">
+                    <img src="src/3.png" alt="Image 3" class="card">
+                    <img src="src/4.png" alt="Image 4" class="card">
+                    <img src="src/5.png" alt="Image 5" class="card">
+                </div>
+
+                <div aria-hidden class="group">
+                    <img src="src/1.png" alt="Image 1" class="card">
+                    <img src="src/2.png" alt="Image 2" class="card">
+                    <img src="src/3.png" alt="Image 3" class="card">
+                    <img src="src/4.png" alt="Image 4" class="card">
+                    <img src="src/5.png" alt="Image 5" class="card">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="anniversary-footer">
+        <div>
+            <button class="tombol cta-button" onclick="location.href = 'viewall.html'">View All Sweet Memories</button>
+        </div>
+        <p class="footer-text">Happy 1st Anniversary, My Love! ❤️</p>
+    </footer>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+          // Logic untuk Video Carousel
+          const track = document.querySelector('.carousel-vid-track');
+          const slides = document.querySelectorAll('.vid'); 
+          const nextButton = document.querySelector('.next-btn');
+          const prevButton = document.querySelector('.prev-btn');
+
+          let currentSlideIndex = 0;
+          const slideCount = slides.length;
+
+          function moveToSlide(index) {
+            // Lebar satu slide adalah 100% dari .carousel-vid
+            const offset = index * -100;
+            track.style.transform = `translateX(${offset}%)`;
+            currentSlideIndex = index;
+          }
+
+          nextButton.addEventListener('click', () => {
+            const nextIndex = (currentSlideIndex + 1) % slideCount;
+            moveToSlide(nextIndex);
+          });
+
+          prevButton.addEventListener('click', () => {
+            let prevIndex = currentSlideIndex - 1;
+            if (prevIndex < 0) {
+              prevIndex = slideCount - 1; 
+            }
+            moveToSlide(prevIndex);
+          });
+
+          moveToSlide(0);
+        });        
+    </script>
+</body>
+</html>

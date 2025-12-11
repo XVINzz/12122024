@@ -1,0 +1,104 @@
+/* viewall.css - Versi Anniversary 1 Tahun */
+
+/* Warna tema: Merah muda (pink) dan emas/merah maroon untuk kesan romantis & mewah */
+body {
+    font-family: 'Georgia', serif; /* Font lebih elegan */
+    background-color: #FFF0F5; /* Light Pink - Warna dasar yang lembut */
+    padding: 30px 20px 80px 20px; /* Padding bawah untuk ruang footer */
+    margin: 0;
+}
+
+/* Penyesuaian Header untuk tema Anniversary */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    background: linear-gradient(to right, #E91E63, #FF69B4); /* Gradient romantis */
+    color: white; /* Teks putih */
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Shadow lebih kuat */
+}
+
+header h1 {
+    font-size: 3em; /* Ukuran sangat besar */
+    margin: 0;
+    letter-spacing: 3px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2); /* Shadow lebih menonjol */
+    /* Tambah border bawah emas */
+    border-bottom: 4px double #FFD700; 
+    padding-bottom: 10px;
+}
+
+header h2 {
+    font-size: 1.5em; 
+    margin-top: 10px;
+    color: #FFD700; /* Warna Emas */
+    font-style: italic;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* 1. Pengaturan untuk wadah galeri (Grid Container) */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Card sedikit lebih besar */
+    gap: 30px; /* Jarak antar card lebih besar */
+    max-width: 1400px; /* Lebar maksimum lebih besar */
+    margin: 0 auto;
+}
+
+/* 2. Pengaturan untuk setiap card foto (figure) */
+.photo-card {
+    /* Border, shadow, dan styling untuk setiap card */
+    border: 5px solid #8B0000; /* Deep Red/Maroon - Warna border yang kuat */
+    padding: 20px; /* Padding lebih besar */
+    background-color: #FFFFFF; 
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25); /* Shadow yang lebih menonjol */
+    margin: 0; 
+    border-radius: 15px; /* Sudut lebih melengkung */
+    transition: all 0.5s ease; /* Transisi lebih halus dan lambat */
+}
+
+.photo-card:hover {
+    transform: scale(1.05) rotate(0deg); /* Efek angkat lebih jelas, rotasi dihilangkan untuk kesan mewah */
+    box-shadow: 0 15px 35px rgba(255, 215, 0, 0.7); /* Shadow Emas saat di-hover */
+    border-color: #FFD700; /* Border berubah jadi emas */
+}
+
+/* 3. Pengaturan untuk gambar */
+.photo-card img {
+    width: 100%; 
+    height: 250px; /* Tinggi gambar lebih proporsional */
+    object-fit: cover; 
+    display: block; 
+    border-radius: 10px; /* Sudut gambar sedikit melengkung */
+    border: 3px solid #FFC0CB; /* Border tipis di gambar */
+}
+
+/* 4. Pengaturan untuk caption */
+.caption {
+    margin-top: 15px; 
+    text-align: center; 
+    font-size: 1.1em; /* Ukuran teks lebih besar */
+    color: #8B0000; /* Maroon - Warna kontras yang elegan */
+    font-style: normal;
+    font-weight: bold;
+    border-top: 4px solid #FFD700; /* Garis emas solid */
+    padding-top: 15px;
+    letter-spacing: 0.5px;
+}
+
+/* 5. Styling Footer: Dibuat tidak menempel/fixed */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #8B0000; /* Maroon solid */
+    color: #FFD700; /* Emas */
+    font-size: 1.5em;
+    font-weight: bold;
+    border-top: 5px double #FFD700;
+    width: 100%; /* Memastikan lebar penuh */
+    /* Hapus 'position: fixed;' agar footer muncul saat discroll ke bawah */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Bayangan di bagian atas footer */
+    position: relative; /* Memastikan rendering yang tepat */
+}
